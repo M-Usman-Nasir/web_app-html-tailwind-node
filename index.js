@@ -30,8 +30,12 @@ const writeUsers = async (data) => {
 }
 
 // HTML Routes
-app.get("/register", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "register.html"))
+})
+
+app.get("/login" ,(req, res) => {
+  res.sendFile(path.join(__dirname, "login.html"))
 })
 
 app.get("/users", async (req, res) => {
@@ -41,9 +45,30 @@ app.get("/users", async (req, res) => {
     <ul>
     ${users.map((user) => `<li>${user.fullName} - ${user.email}</li>`).join("")}
     </ul>
-    <a href="/register">Register New User</a>  <!-- Changed from /signup -->
+    <a href="/">Register New User</a>  <!-- Changed from /signup -->
+    <a href="/dashboard">Dashboard</a>
     `
   res.send(html)
+})
+
+app.get("/dashboard", (req, res)=> {
+  res.sendFile(path.join(__dirname, "dashboard.html"))
+})
+
+app.get("/home", (req, res)=> {
+  res.sendFile(path.join(__dirname, "home.html"))
+})
+
+app.get("/settings", (req, res)=> {
+  res.sendFile(path.join(__dirname, "settings.html"))
+})
+
+app.get("/profile", (req, res)=> {
+  res.sendFile(path.join(__dirname, "profile.html"))
+})
+
+app.get("/logout", (req, res)=> {
+  res.sendFile(path.join(__dirname, "logout.html"))
 })
 
 // API Routes
@@ -139,7 +164,7 @@ app.post("/submit-registration", async (req, res) => {
   users.push(newUser)
   await writeUsers(users)
 
-  res.redirect("/users")
+  res.redirect("/dashboard")
 })
 
 app.listen(8000, () => console.log("Server Started!"))

@@ -19,5 +19,19 @@
     "email": "Ahmar@gmail.com",
     "phone": "3142018065",
     "password": "321"
+  },
+  {
+    "id": 4,
+    "fullName": "Mohammad Usman Nasir",
+    "email": "bassukhan89@gmail.com",
+    "phone": "04394839",
+    "password": "asas"
+  },
+  {
+    "id": 5,
+    "fullName": "Mohammad Usman Nasir",
+    "email": "bassukhan89@gmail.com",
+    "phone": "04394839",
+    "password": "asas"
   }
 ]
