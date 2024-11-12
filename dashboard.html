@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Dashboard</title>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex">
+
+    <!-- Sidebar -->
+    <aside class="w-1/5 bg-red-700 text-white p-6 hidden lg:block">
+      <h2 class="text-3xl font-semibold mb-6 text-center">Dashboard</h2>
+      <nav class="space-y-4">
+        <a href="home.html" class="block px-4 py-2 rounded hover:bg-red-600">Home</a>
+        <a href="profile.html" class="block px-4 py-2 rounded hover:bg-red-600">Profile</a>
+        <a href="settings.html" class="block px-4 py-2 rounded hover:bg-red-600">Settings</a>
+        <a href="logout.html" class="block px-4 py-2 rounded hover:bg-red-600">Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <div class="flex-1 p-8">
+      <!-- Header -->
+      <header class="bg-red-600 p-4 text-white text-center rounded-md shadow-lg mb-8">
+        <h1 class="text-2xl font-semibold">Welcome to your Dashboard! 👋</h1>
+      </header>
+
+      <!-- Content -->
+      <main class="text-center space-y-6">
+        <p class="text-lg text-gray-700">Here are some quick links:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Profile Card -->
+          <a href="profile.html" class="bg-blue-500 text-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:bg-blue-600 hover:scale-105">
+            <h3 class="text-xl font-bold">Profile</h3>
+            <p class="text-sm mt-2">View and edit your profile information</p>
+          </a>
+
+          <!-- Settings Card -->
+          <a href="settings.html" class="bg-green-500 text-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:bg-green-600 hover:scale-105">
+            <h3 class="text-xl font-bold">Settings</h3>
+            <p class="text-sm mt-2">Customize your preferences</p>
+          </a>
+
+          <!-- Logout Card -->
+          <a href="logout.html" class="bg-red-500 text-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:bg-red-600 hover:scale-105">
+            <h3 class="text-xl font-bold">Logout</h3>
+            <p class="text-sm mt-2">Log out of your account</p>
+          </a>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>
